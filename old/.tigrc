@@ -1,0 +1,6 @@
+# 棄用
+# set show-date = relative 
+
+set main-view-date = custom
+set main-view-date-format = "%Y-%m-%d %H:%M:%S %Z" 
+#set main-view-date-local = false

@@ -1,0 +1,143 @@
+k9s:
+  refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
+  headless: false
+  crumbsless: false
+  readOnly: false
+  noIcons: false
+  logger:
+    tail: 100
+    buffer: 5000
+    sinceSeconds: -1
+    fullScreenLogs: false
+    textWrap: false
+    showTime: false
+  currentContext: gke_ocms-site-platform_asia-southeast1_ocms-sg-01
+  currentCluster: gke_ocms-site-platform_asia-southeast1_ocms-sg-01
+  clusters:
+    gke-ocms-demo:
+      namespace:
+        active: ""
+        favorites:
+        - demo-id
+        - all
+        - ocmsv2
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    gke-verydiu:
+      namespace:
+        active: ""
+        favorites:
+        - all
+        - sonarqube
+        - verydiu
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    gke_ocms-site-platform_asia-southeast1_ocms-sg-01:
+      namespace:
+        active: l6
+        favorites:
+        - h9
+        - s9
+        - jw
+        - si
+        - huc
+        - l6
+        - all
+        - default
+      view:
+        active: service
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    gke_ocms-site-platform_northamerica-northeast1_ocms-na-01:
+      namespace:
+        active: bl
+        favorites:
+        - bl
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    ocms-v2-preprod:
+      namespace:
+        active: cb5sp-preprod
+        favorites:
+        - mmk2-preprod
+        - thb1-preprod
+        - thb5-preprod
+        - thb4-preprod
+        - sonarqube
+        - ocmsop
+        - all
+        - bv-preprod
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    ocms-v2-preprod-si-preprod:
+      namespace:
+        active: si-preprod
+        favorites:
+        - si-preprod
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
